@@ -7,31 +7,11 @@ import {
   RegularText,
   StrongText,
   TextContainer,
-  TextNumberContainerStyled,
-  TextNumberStyled,
-  TextStyled,
-  Title,
-  TitleContainer,
 } from "./styles";
 
 export function EmptyTasks() {
   return (
     <Container>
-      <TitleContainer>
-        <Title>
-          <TextStyled variant="blue">Criadas</TextStyled>
-          <TextNumberContainerStyled>
-            <TextNumberStyled>0</TextNumberStyled>
-          </TextNumberContainerStyled>
-        </Title>
-        <Title>
-          <TextStyled variant="purple">Concluidas</TextStyled>
-          <TextNumberContainerStyled>
-            <TextNumberStyled>0</TextNumberStyled>
-          </TextNumberContainerStyled>
-        </Title>
-      </TitleContainer>
-
       <ContentContainer style={styles.borderText}>
         <IconContainer>
           <ClipboardText size={56} color="#262626" />
