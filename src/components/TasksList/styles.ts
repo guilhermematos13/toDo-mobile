@@ -23,7 +23,7 @@ interface TextStyledProps {
 
 export const TextStyled = styled.Text<TextStyledProps>`
     font-family: ${props => props.theme.FONT_FAMILY.BOLD};
-    font-size: ${props => props.theme.FONT_SIZE.SM};
+    font-size: ${props => props.theme.FONT_SIZE.SM}px;
     ${props => props.variant === 'blue' ? `color: ${props.theme.COLORS.BLUE}` : `color: ${props.theme.COLORS.PURPLE}`}
 
 `

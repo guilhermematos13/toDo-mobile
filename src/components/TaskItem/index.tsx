@@ -1,12 +1,24 @@
 import { TrashSimple } from "phosphor-react-native";
-import { Checkbox } from "./components/Checkbox";
-import { Container, ContainerContent, TextStyled, TrashButton } from "./styles";
+import { useState } from "react";
+import {
+  CheckboxStyled,
+  Container,
+  ContainerContent,
+  TextStyled,
+  TrashButton,
+} from "./styles";
 
-export function TaskItem() {
+type TaskItemProps = {
+  isCompleted: boolean;
+};
+
+export function TaskItem({ isCompleted }: TaskItemProps) {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <Container>
       <ContainerContent>
-        <Checkbox />
+        <CheckboxStyled value={isChecked} onValueChange={setIsChecked} />
         <TextStyled>
           Integer urna interdum massa libero{"\n"}auctor neque turpis turpis
           semper.
