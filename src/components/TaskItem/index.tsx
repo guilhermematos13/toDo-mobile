@@ -9,21 +9,32 @@ import {
 } from "./styles";
 
 type TaskItemProps = {
-  isCompleted: boolean;
+  id: string;
+  isComplete: boolean;
+  title: string;
+  handleDeleteTask: (id: string) => void;
+  handleEditTask: (id: string, isComplete: boolean) => void;
 };
 
-export function TaskItem({ isCompleted }: TaskItemProps) {
+export function TaskItem({
+  id,
+  isComplete,
+  title,
+  handleDeleteTask,
+  handleEditTask,
+}: TaskItemProps) {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
     <Container>
       <ContainerContent>
         <CheckboxStyled value={isChecked} onValueChange={setIsChecked} />
-        <TextStyled>
-          Integer urna interdum massa libero{"\n"}auctor neque turpis turpis
-          semper.
-        </TextStyled>
-        <TrashButton>
+        <TextStyled>{title}</TextStyled>
+        <TrashButton
+          onPress={() => {
+            handleDeleteTask(id);
+          }}
+        >
           <TrashSimple size={16} color="#808080" />
         </TrashButton>
       </ContainerContent>
