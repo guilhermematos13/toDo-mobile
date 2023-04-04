@@ -27,11 +27,17 @@ export function TaskList({ getList, list, isLoading = false }: TaskListProps) {
 
   function handleEditTask(id: string, isComplete: boolean) {
     api
-      .put(`/list/${id}`, { isComplete: !isComplete })
+      .put(`/list/${id}`, { isComplete })
       .then(() => {
         getList();
+        console.log("Deu bom");
+        console.log(id);
+        console.log(isComplete);
       })
-      .catch(() => Alert.alert("Ops", "Algo deu errado!"));
+      .catch(() => {
+        Alert.alert("Ops", "Algo deu errado!");
+        console.log("Deu ruim");
+      });
   }
 
   function handleDeleteTask(id: string) {

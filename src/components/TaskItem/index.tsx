@@ -19,8 +19,6 @@ export function TaskItem({
   handleDeleteTask,
   handleEditTask,
 }: TaskItemProps) {
-  const [isChecked, setIsChecked] = useState(false);
-
   return (
     <Container>
       <ContainerContent>
@@ -28,16 +26,17 @@ export function TaskItem({
           size={18}
           fillColor="#5E60CE"
           unfillColor="transparent"
-          onPress={setIsChecked}
+          onPress={(event) => handleEditTask(id, event)}
           iconStyle={{ borderColor: "#4EA8DE" }}
           innerIconStyle={{
             borderWidth: 2,
-            borderColor: isChecked ? "#5E60CE" : "#4EA8DE",
+            borderColor: isComplete ? "#5E60CE" : "#4EA8DE",
           }}
+          isChecked={isComplete}
           text={title}
           textStyle={{
             fontSize: 14,
-            color: isChecked ? "#808080" : "#F2F2F2",
+            color: isComplete ? "#808080" : "#F2F2F2",
             width: 250,
           }}
         />
