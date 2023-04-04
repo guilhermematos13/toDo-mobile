@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { EmptyTasks } from "../EmptyTasks";
 import { TaskItem } from "../TaskItem";
 import {
@@ -10,6 +11,8 @@ import {
 } from "./styles";
 
 export function TaskList() {
+  const [] = useState();
+
   return (
     <Container>
       <TitleContainer>
@@ -26,7 +29,7 @@ export function TaskList() {
           </TextNumberContainerStyled>
         </Title>
       </TitleContainer>
-      <TaskItem />
+      {/* <TaskItem /> */}
       {/* <EmptyTasks /> */}
     </Container>
   );
