@@ -52,6 +52,17 @@ export function TaskList({ getList, list, isLoading = false }: TaskListProps) {
       });
   }
 
+  function isCompleteValidation() {
+    let counter = 0;
+
+    list.map((item: any) => {
+      if (item.isComplete) {
+        counter = counter + 1;
+      }
+    });
+    return counter;
+  }
+
   if (isLoading) {
     return <Loading />;
   }
@@ -68,7 +79,9 @@ export function TaskList({ getList, list, isLoading = false }: TaskListProps) {
         <Title>
           <TextStyled variant="purple">Concluidas</TextStyled>
           <TextNumberContainerStyled>
-            <TextNumberStyled>0</TextNumberStyled>
+            <TextNumberStyled>
+              {isCompleteValidation()} de {list.length}
+            </TextNumberStyled>
           </TextNumberContainerStyled>
         </Title>
       </TitleContainer>
