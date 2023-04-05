@@ -95,8 +95,8 @@ export function TaskList({ getList, list, isLoading = false }: TaskListProps) {
         )}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 400 }}
+        ListEmptyComponent={<EmptyTasks />}
       />
-      {list.length === 0 && <EmptyTasks />}
     </Container>
   );
 }
