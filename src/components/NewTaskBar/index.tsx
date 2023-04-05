@@ -25,6 +25,7 @@ export function NewTaskBar({ getList }: NewTaskProps) {
         .catch(() => {
           Alert.alert("Ops", "Algo deu errado!");
         });
+      setTaskTitle("");
     }
   }
 

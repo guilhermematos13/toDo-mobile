@@ -17,7 +17,6 @@ export function Home() {
       .get("/list")
       .then((response) => {
         setList(response.data);
-        console.log(list);
       })
       .catch(() => {
         Alert.alert("Ops!", "Algo deu errado!");

@@ -30,13 +30,9 @@ export function TaskList({ getList, list, isLoading = false }: TaskListProps) {
       .put(`/list/${id}`, { isComplete })
       .then(() => {
         getList();
-        console.log("Deu bom");
-        console.log(id);
-        console.log(isComplete);
       })
       .catch(() => {
         Alert.alert("Ops", "Algo deu errado!");
-        console.log("Deu ruim");
       });
   }
 
