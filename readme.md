@@ -18,7 +18,8 @@ Run Project
 
 ## 🖥️ Technologies Used
 
-- React (18.2.0)
+- React (18.0.14)
+- React-Native (0.71.3)
 - Typescript (4.9.3)
 
 ## 📚 Libraries Used
