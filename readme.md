@@ -1,4 +1,4 @@
-# Todo! Project
+# Todo! Mobile Project
 
 This is an individual project in order to improve my learning
 
