@@ -32,7 +32,6 @@ Run Project
 
 ## 🚀 Features
 
-- Responsiveness
 - Change of State
 - Use Styled Components for styles
 - Connection with API
